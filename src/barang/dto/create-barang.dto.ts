@@ -1,25 +1,23 @@
-import { IsNotEmpty, IsNumber, IsString, Min } from 'class-validator';
+import { IsNotEmpty, IsNumber, IsOptional, IsString } from 'class-validator';
 
 export class CreateBarangDto {
   @IsNotEmpty()
   @IsString()
-  namaBarang: string;
+  nama_barang: string;
 
   @IsNotEmpty()
   @IsNumber()
-  kategoriId: number;
+  kategori_id: number;
 
   @IsNotEmpty()
   @IsNumber()
-  @Min(0)
   stok: number;
 
   @IsNotEmpty()
   @IsString()
-  kelompokBarang: string;
+  kelompok_barang: string;
 
   @IsNotEmpty()
   @IsNumber()
-  @Min(0)
   harga: number;
 }
