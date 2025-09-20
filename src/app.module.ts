@@ -4,6 +4,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { Barang } from './barang/barang.entitiy';
 import { Kategori } from './kategori/kategori.entitiy';
 import { BarangModule } from './barang/barang.module';
+import { KategoriModule } from './kategori/kategori.module';
 
 @Module({
   imports: [
@@ -26,6 +27,7 @@ import { BarangModule } from './barang/barang.module';
       }),
     }),
     BarangModule,
+    KategoriModule
   ],
 })
 export class AppModule {}
